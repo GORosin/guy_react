@@ -7,6 +7,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  max-width: 100%;
+  position: relative;
+  height: auto;
+  display: block;
+  float: left;
+}
+
+NavItem{
+	color: white;
+}
+
+hr {clear:both;}
+
+#block{
+	width: 500px;
+}
+
+#guy{
+	float:right;
+}
+
+p,h1{
+	color: white; 
+	padding: 20px;
+	font-size: 120%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
