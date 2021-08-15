@@ -1,26 +1,25 @@
 import React from 'react';
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { NavigationBar } from './components/NavigationBar';
-import { Home } from './Home';
-import { About } from './About';
-import { NoMatch } from './NoMatch';
-import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Papers from './pages/Papers';
+import Resume from './pages/Resume';
 
 function App() {
   return (
-	<React.Fragment>
-		<Router>
-			<NavigationBar />
-			<Sidebar />
-			<Switch>
-				<Route exact path="/guy_react" component={Home} />
-				<Route path="/about" component={About} />
-				<Route component={NoMatch} />
-			</Switch>
-		</Router>
-	</React.Fragment>
+    <div className="App">
+	<Router>
+		<Navbar />
+		<Switch>
+		<Route path= '/guy_react' exact component={Home}/>
+		<Route path= '/about' component={About}/>
+		<Route path= '/papers' component={Papers}/>
+		<Route path= '/resume' component={Resume}/>
+		</Switch>
+	</Router>
+    </div>
   );
 }
 

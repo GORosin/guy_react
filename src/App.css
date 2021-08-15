@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about, .papers, .resume {
+	background-color: #f3f8f8;
+	height: 200vh;
+	margin-left: 15em;
+	color: #424242; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.paper{
+	line-height: 2;
+	font-family: "Times New Roman";
+	padding:10px;
+	color:black;
 }
 
-.App-header {
-  background-color: #282c34;
+.home{
+	margin-left: 15em;
+	height: 100%;
+	background-image: url("CERN_particles.png");
+	background-repeat: no-repeat;
+	background-color: black;
+	color: white;
+	background-size: 100% auto;
+	text-align: center;
+}
+
+.textbox{
+  background-color: lightgrey;
+  min-width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(0, 0, 90, 0.7);
+  margin: auto;
+  padding:30px;
 }
 
-.App-link {
-  color: #61dafb;
+
+img {
+  position: relative;
+  height: auto;
+  display: block;
+  float: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr {clear:both;}
+
+.block{
+	width: 400px;
+	padding: 20px;
+}
+
+#guy{
+	float:right;
+	width: 400px;
+	padding: 20px;
+}
+
+p,h1,h4{
+	line-height: 2;
+	font-family: "Times New Roman";
+	padding:10px;
+}
+p{
+	padding: 15px;
+	font-size: 100%;
+}
+h1{
+	text-align: center;
+	font-size: 200%;
+}
+h4{
+	font-size: 120%;
 }
