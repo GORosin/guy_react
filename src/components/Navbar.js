@@ -1,5 +1,4 @@
-import React, {useState, useEffect } from 'react';
-import * as AiIcons from "react-icons/ai";
+import React, {useState} from 'react';
 import * as FaIcons from "react-icons/fa";
 import {Link } from 'react-router-dom';
 import {SidebarData} from './SidebarData';
@@ -51,14 +50,14 @@ function Navbar(){
 					)
 				})}
 				<li className='contact'>
-					<a className='contact-me'>Contact Me</a>
+					<p className='contact-me'>Contact Me</p>
 				</li>
 				<li>
 					<a className='contact-info' href="https://guy.rosin1@gmail.com">
 					guy.rosin1@gmail.com</a>
 				</li>
 				<li>
-					<a className='contact-info'>617-669-9397</a>
+					<p className='contact-info'>617-669-9397</p>
 				</li>
 			</ul>
 		</nav>
