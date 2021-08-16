@@ -64,6 +64,10 @@ hr {clear:both;}
   margin:auto;
 }
 
+@media screen and (max-width: 600px) {
+  #guy_portrait, #guy, .block{display:none;}
+}
+
 
 p,h1,h4{
 	line-height: 2;
