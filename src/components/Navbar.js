@@ -1,49 +1,42 @@
 import React, {useState, useEffect } from 'react';
 import * as AiIcons from "react-icons/ai";
+import * as FaIcons from "react-icons/fa";
 import {Link } from 'react-router-dom';
 import {SidebarData} from './SidebarData';
 import './Navbar.css';
 import {IconContext} from 'react-icons';
 
 
-
 function Navbar(){
 	const [sidebar, setSidebar] = useState(true);
 
 	const showSidebar = () => setSidebar(!sidebar);
-
-	const [width, setWidth] = useState(window.innerWidth);
-	
-	useEffect(() => {
-		function updateWidth(){
-			setWidth(window.innerWidth)
-		}
-		window.addEventListener('resize', updateWidth);
-		updateWidth();
-		return () => window.removeEventListener('resize', updateWidth);
-	}, []);
-	
 	
 	return(
 	<div>
 		<IconContext.Provider value={{color: '#fff'}}>
 		<div className="navbar">
-			
-			
-			<a href="https://www.linkedin.com/in/grosin/">
-			LinkedIn</a>
-			<a href="https://github.com/GORosin">
-			Github</a>
-			<a href="https://gitlab.cern.ch/grosin">
-			Gitlab</a>
-			<a href="https://jovian.ai/guy-rosin1">
-			Jovian</a>
-			
+			<Link to='#' className = 'menu-bars'>
+			   <FaIcons.FaBars onClick={showSidebar}/>
+			</Link>
+			<span>
+				<a href="https://www.linkedin.com/in/grosin/">
+				LinkedIn</a>
+				<a href="https://github.com/GORosin">
+				Github</a>
+				<a href="https://gitlab.cern.ch/grosin">
+				Gitlab</a>
+				<a href="https://jovian.ai/guy-rosin1">
+				Jovian</a>		
+			</span>
 		</div>
-		
 		<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+		
 			<ul className='nav-menu-items'>
 				<li className='navbar-toggle'>
+					<Link to='#' className = 'menu-bars'>
+						<FaIcons.FaBars onClick={showSidebar}/>
+					</Link>
 				</li>
 				{SidebarData.map((item,index)=>{
 					return(
