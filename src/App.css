@@ -41,19 +41,16 @@
   padding:30px;
 }
 
+hr {clear:both;}
 
-img {
+.block{
+  width: 400px;
+  padding: 20px;
   position: relative;
   height: auto;
   display: block;
   float: left;
-}
 
-hr {clear:both;}
-
-.block{
-	width: 400px;
-	padding: 20px;
 }
 
 #guy{
@@ -61,6 +58,12 @@ hr {clear:both;}
 	width: 400px;
 	padding: 20px;
 }
+
+#guy_portrait{
+  width: 300px;
+  margin:auto;
+}
+
 
 p,h1,h4{
 	line-height: 2;
