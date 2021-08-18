@@ -11,7 +11,9 @@
 	background-color: #f3f8f8;
 	height: 200vh;
 	margin-left: 15em;
-	color: #424242; 
+	color: #424242;
+	transition: 500ms;
+	
 }
 
 .paper{
@@ -30,6 +32,8 @@
 	color: white;
 	background-size: 100% auto;
 	text-align: center;
+	transition: 500ms;
+
 }
 
 .textbox{
@@ -46,11 +50,8 @@ hr {clear:both;}
 .block{
   width: 400px;
   padding: 20px;
-  position: relative;
   height: auto;
-  display: block;
   float: left;
-
 }
 
 #guy{
@@ -66,6 +67,13 @@ hr {clear:both;}
 
 @media screen and (max-width: 600px) {
   #guy_portrait, #guy, .block{display:none;}
+}
+
+@media screen and (max-width: 960px) {
+  .home,.about,.papers,.resume{
+	  margin-left: 0em;
+	  transition: 0ms;
+  }
 }
 
 

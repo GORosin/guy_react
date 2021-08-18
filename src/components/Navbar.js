@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import * as FaIcons from "react-icons/fa";
 import {Link } from 'react-router-dom';
 import {SidebarData} from './SidebarData';
@@ -10,6 +10,16 @@ function Navbar(){
 	const [sidebar, setSidebar] = useState(true);
 
 	const showSidebar = () => setSidebar(!sidebar);
+	
+	const [size, setSize] = useState(window.innerHeight, window.innerWidth);
+	
+	useEffect(() => {
+		const handleResize = () => {
+			setSize([window.innerHeight, window.innerWidth])
+		}
+		window.addEventListener("resize", handleResize);
+	}, []);
+	
 	
 	return(
 	<div>
@@ -26,11 +36,10 @@ function Navbar(){
 				<a href="https://gitlab.cern.ch/grosin">
 				Gitlab</a>
 				<a href="https://jovian.ai/guy-rosin1">
-				Jovian</a>		
+				Jovian</a>	
 			</span>
 		</div>
-		<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-		
+		<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>	
 			<ul className='nav-menu-items'>
 				<li className='navbar-toggle'>
 					<Link to='#' className = 'menu-bars'>
