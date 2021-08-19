@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import * as FaIcons from "react-icons/fa";
 import {Link } from 'react-router-dom';
 import {SidebarData} from './SidebarData';
@@ -10,16 +10,6 @@ function Navbar(){
 	const [sidebar, setSidebar] = useState(true);
 
 	const showSidebar = () => setSidebar(!sidebar);
-	
-	const [size, setSize] = useState(window.innerHeight, window.innerWidth);
-	
-	useEffect(() => {
-		const handleResize = () => {
-			setSize([window.innerHeight, window.innerWidth])
-		}
-		window.addEventListener("resize", handleResize);
-	}, []);
-	
 	
 	return(
 	<div>
